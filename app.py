@@ -6,6 +6,7 @@ import streamlit as st
 import openai
 import json
 import os
+import re
 from datetime import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
@@ -34,7 +35,6 @@ class CandidateProfile(BaseModel):
     location: Optional[str] = None
     work_authorization: Optional[str] = None
     notice_period: Optional[str] = None
-    additional_info: Dict[str, str] = Field(default_factory=dict)
 
 
 class ScreeningQuestion:
@@ -132,8 +132,6 @@ def initialize_session_state():
         st.session_state.current_question_index = 0
     if "screening_complete" not in st.session_state:
         st.session_state.screening_complete = False
-    if "conversation_mode" not in st.session_state:
-        st.session_state.conversation_mode = "structured"  # structured or open
 
 
 def get_llm_response(user_message: str, context: str = "") -> str:
@@ -171,13 +169,12 @@ def process_answer(answer: str, question: Dict) -> None:
         # Extract numeric value
         try:
             # Try to extract number from text
-            import re
             numbers = re.findall(r'\d+', answer)
             if numbers:
                 candidate.years_of_experience = int(numbers[0])
             else:
                 candidate.years_of_experience = 0
-        except:
+        except (ValueError, TypeError):
             candidate.years_of_experience = 0
     else:
         # Set field directly
