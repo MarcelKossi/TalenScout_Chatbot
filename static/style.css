@@ -1,0 +1,26 @@
+.chat-bubble-user {
+    background-color: #e0fccb;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    max-width: 75%;
+    float: right;
+    clear: both;
+    color: black;
+}
+
+.chat-bubble-bot {
+    background-color: #E7E7E7;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    max-width: 75%;
+    float: left;
+    clear: both;
+    color: black;
+}
+
+/* Ensure container allows floating elements */
+.stChatMessage {
+    overflow: hidden;
+}

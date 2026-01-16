@@ -1,0 +1,36 @@
+# PYTHON CACHE & TEMPO FILES
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.log
+
+# ENVIRONMENT / SECRETS
+.env
+.env.*
+
+# Do NOT comit the API key accidentally
+OPENAI_API_KEY
+# VIRTUAL ENVIRONMENTS
+venv/
+.venv/
+env/
+ENV/
+
+# STREAMLIT CACHE
+.streamlit/
+streamlit_cache/
+cache/
+
+# OS / EDITOR FILES
+.DS_Store
+Thumbs.db
+
+# PYTHON ARTIFACTS
+build/
+dist/
+*.egg-info/
+
+# NODE MODULES (for later)
+node_modules/
