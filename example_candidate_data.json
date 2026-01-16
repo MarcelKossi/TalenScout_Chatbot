@@ -1,0 +1,22 @@
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "+1-234-567-8900",
+  "position_applied": "Software Engineer",
+  "years_of_experience": 5,
+  "current_role": "Senior Developer",
+  "skills": [
+    "Python",
+    "Machine Learning",
+    "AWS",
+    "Docker",
+    "Kubernetes"
+  ],
+  "education": "Bachelor's in Computer Science from MIT",
+  "availability": "2 weeks notice",
+  "expected_salary": "$120,000 - $140,000",
+  "location": "San Francisco, CA (Open to remote work)",
+  "work_authorization": "Yes, US Citizen",
+  "notice_period": "2 weeks",
+  "additional_info": {}
+}
