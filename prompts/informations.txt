@@ -28,8 +28,8 @@ VALIDATION RULES:
    - Minimum 7 digits.
 
 4. Years of Experience:
-   - Must be a number.
-   - Must be between 0 and 40.
+   - Can be a decimal or integer.
+   - Must be between 0.1 and 40.0.
 
 5. Desired Position(s):
    - Accept one or multiple positions.
@@ -51,7 +51,7 @@ If the user provides irrelevant input:
     “Thank you. Could you please provide the requested information instead?”
 
 If the user provides multiple fields at once:
-    Accept them, validate them correctly, and proceed to next missing field.
+    Do not Accept them, ask him to provide one field at a time, and proceed to next missing field.
 
 Once all fields are gathered and validated:
     “Thank you. I now have all the required details. Next, I will generate technical questions based on your tech stack.”

@@ -123,9 +123,9 @@ class ConversationState:
         questions_mapping = {
             "name": "Please provide your full name (first and last name).",
             "email": "What is your email address?",
-            "phone": "What is your phone number?",
-            "experience_years": "How many years of professional experience do you have?",
-            "desired_positions": "Which position(s) are you applying for?",
+            "phone": "Please enter your phone number including the country code (e.g. +91XXXXXXXXX for India).",
+            "experience_years": "How many years of professional experience do you have? (You may use decimals, e.g. 0.5 for 6 months)",
+            "desired_positions": "What type of position are you interested in? (e.g. Backend Developer, AI Engineer, Data Analyst)",
             "location": "What is your current location (city/country)?",
             "tech_stack": "Please list the programming languages, frameworks, and tools in your tech stack."
         }

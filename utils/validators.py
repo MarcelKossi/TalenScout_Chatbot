@@ -79,11 +79,11 @@ class Validators:
             return False, "Please provide the number of years of experience."
 
         try:
-            value = int(years)
+            value = float(years)
         except ValueError:
             return False, "Years of experience must be a number."
 
-        if value < 0 or value > 40:
+        if value < 0.1 or value > 40.0:
             return False, "Experience must be between 0 and 40 years."
 
         return True, value
